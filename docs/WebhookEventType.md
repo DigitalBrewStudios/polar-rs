@@ -1,0 +1,41 @@
+# WebhookEventType
+
+## Enum Variants
+
+| Name | Value |
+|---- | -----|
+| CheckoutCreated | checkout.created |
+| CheckoutUpdated | checkout.updated |
+| CustomerCreated | customer.created |
+| CustomerUpdated | customer.updated |
+| CustomerDeleted | customer.deleted |
+| CustomerStateChanged | customer.state_changed |
+| CustomerSeatAssigned | customer_seat.assigned |
+| CustomerSeatClaimed | customer_seat.claimed |
+| CustomerSeatRevoked | customer_seat.revoked |
+| OrderCreated | order.created |
+| OrderUpdated | order.updated |
+| OrderPaid | order.paid |
+| OrderRefunded | order.refunded |
+| SubscriptionCreated | subscription.created |
+| SubscriptionUpdated | subscription.updated |
+| SubscriptionActive | subscription.active |
+| SubscriptionCanceled | subscription.canceled |
+| SubscriptionUncanceled | subscription.uncanceled |
+| SubscriptionRevoked | subscription.revoked |
+| RefundCreated | refund.created |
+| RefundUpdated | refund.updated |
+| ProductCreated | product.created |
+| ProductUpdated | product.updated |
+| BenefitCreated | benefit.created |
+| BenefitUpdated | benefit.updated |
+| BenefitGrantCreated | benefit_grant.created |
+| BenefitGrantCycled | benefit_grant.cycled |
+| BenefitGrantUpdated | benefit_grant.updated |
+| BenefitGrantRevoked | benefit_grant.revoked |
+| OrganizationUpdated | organization.updated |
+
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

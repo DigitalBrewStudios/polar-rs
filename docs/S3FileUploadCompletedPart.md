@@ -1,0 +1,13 @@
+# S3FileUploadCompletedPart
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**number** | **i32** |  | 
+**checksum_etag** | **String** |  | 
+**checksum_sha256_base64** | Option<**String**> |  | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

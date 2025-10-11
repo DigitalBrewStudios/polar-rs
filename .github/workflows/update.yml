@@ -1,0 +1,25 @@
+name: Update
+on:
+  schedule:
+    - cron: "0 0 * * *"
+jobs:
+  generate-rust-client:
+    runs-on: ubuntu-latest
+    name: Example
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Generate Angular Client
+        uses: openapi-generators/openapitools-generator-action@v1
+        with:
+          generator: rust
+          openapi-url: https://api.polar.sh/openapi.json
+          command-args: "-o /var/tmp/polar-rs"
+      - name: Move sdk to root
+        run: mv /var/tmp/polar-rs *
+      - uses: fregante/setup-git-user@v2
+      - name: Commit new update
+        run: |
+          git add .
+          git commit -am "chore: update client"
+          git push
