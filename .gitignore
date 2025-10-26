@@ -1,1 +1,22 @@
+.*
+_*
+
+# Git
+!.gitignore
+!.gitkeep
+!.gitattributes
+
+# Rust
 /target
+
+# Editor/CICD
+!.devcontainer
+!.github
+!.vscode
+.vscode/*
+!.vscode/extensions.json
+
+# Nix
+result
+result-*
+!.envrc
