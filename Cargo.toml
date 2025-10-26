@@ -13,5 +13,7 @@ categories = ["api-bindings"]
 
 [dependencies]
 chrono = { version = "0.4.38", features = ["serde"] }
+reqwest = { version = "0.12.24", features = ["http2", "json", "rustls-tls"], default-features = false }
 serde = { version = "1.0.213", features = ["derive"] }
 serde_json = "1.0.132"
+tokio = { version = "1.48.0", features = ["macros", "rt-multi-thread"] }

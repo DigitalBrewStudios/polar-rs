@@ -5,7 +5,11 @@
 	// List of extensions which should be recommended for users of this workspace.
 	"recommendations": [
 		"rangav.vscode-thunder-client",
-		"dustypomerleau.rust-syntax",
+		"rust-lang.rust-analyzer",
+		"tamasfe.even-better-toml",
+		"fill-labs.dependi",
+		"mkhl.direnv",
+		"jnoortheen.nix-ide",
 		"usernamehw.errorlens",
 		"bierner.docs-view"
 	],
