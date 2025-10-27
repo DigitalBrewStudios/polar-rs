@@ -2,7 +2,11 @@ use chrono::{DateTime, Utc};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
-use super::{product::ProductInput, product_price_recurring::ProductPriceRecurring, subscription_recurring_interval::SubscriptionRecurringInterval, subscription_status::SubscriptionStatus, subscription_user::SubscriptionUser};
+use super::{
+    product::ProductInput, product_price_recurring::ProductPriceRecurring,
+    subscription_recurring_interval::SubscriptionRecurringInterval,
+    subscription_status::SubscriptionStatus, subscription_user::SubscriptionUser,
+};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]

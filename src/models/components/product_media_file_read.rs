@@ -38,7 +38,7 @@ pub struct ProductMediaFileReadInput {
     pub checksum_sha256_hex: Option<String>,
     pub last_modified_at: Option<DateTime<Utc>>,
     pub version: Option<String>,
-    pub service: Option<String>, 
+    pub service: Option<String>,
     pub is_uploaded: bool,
     pub created_at: DateTime<Utc>,
 }

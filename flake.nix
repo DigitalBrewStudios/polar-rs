@@ -52,8 +52,7 @@
               cargo-check.enable = true;
               clippy.enable = true;
               clippy.settings.extraArgs = builtins.concatStringsSep " " [
-                "-D"
-                "warnings"
+                "-Dwarnings"
               ];
             };
           };
@@ -70,6 +69,8 @@
               ++ lib.optionals stdenv.isDarwin [
                 apple-sdk # Darwin
               ];
+
+            RUST_BACKTRACE = "1";
           };
         };
     };

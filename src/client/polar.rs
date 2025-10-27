@@ -1,10 +1,10 @@
-use reqwest::{Client, header, Url};
+use reqwest::{header, Client, Url};
 
 #[derive(Debug, Clone)]
 pub enum Server {
     Production,
     Sandbox,
-    SelfHosted(Url)
+    SelfHosted(Url),
 }
 
 impl Server {
@@ -18,19 +18,22 @@ impl Server {
 }
 
 #[derive(Debug)]
-pub struct Polar{
+pub struct Polar {
     pub client: Client,
-    pub server: Server
+    pub server: Server,
 }
 
-
-impl Polar{
+impl Polar {
     pub fn new(access_token: &str, server: Server) -> Self {
         let mut headers = header::HeaderMap::new();
-        let mut auth_value = header::HeaderValue::from_str(format!("Bearer {access_token}").as_ref()).unwrap();
+        let mut auth_value =
+            header::HeaderValue::from_str(format!("Bearer {access_token}").as_ref()).unwrap();
         auth_value.set_sensitive(true);
         headers.insert(header::AUTHORIZATION, auth_value);
-        headers.insert(header::ACCEPT, header::HeaderValue::from_static("application/json"));
+        headers.insert(
+            header::ACCEPT,
+            header::HeaderValue::from_static("application/json"),
+        );
 
         let client = Client::builder().default_headers(headers).build().unwrap();
         Self {
@@ -39,9 +42,7 @@ impl Polar{
         }
     }
 
-    pub fn list_products() {
-        
-    }
+    pub fn list_products() {}
 }
 
 // impl Products {
