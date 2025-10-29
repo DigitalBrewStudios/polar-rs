@@ -45,6 +45,7 @@
               check-yaml.enable = true;
               yamlfmt.enable = true;
               yamllint.enable = true;
+              yamllint.settings.preset = "relaxed";
 
               "check-toml".enable = true;
               taplo.enable = true;
