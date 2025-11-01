@@ -10,8 +10,12 @@ readme = "README.md"
 keywords = ["polar", "stripe", "subscriptions"]
 categories = ["api-bindings"]
 
+[lints.clippy]
+# The JSON payloads can vary in size by a lot, but we don't think that means some should be wrapped in Box and others shouldn't.
+large-enum-variant = "allow"
 
 [dependencies]
+axum = "0.8.6"
 base64 = "0.22.1"
 chrono = { version = "0.4.38", features = ["serde"] }
 http = "1.3.1"

@@ -25,6 +25,7 @@ pub mod subscription;
 pub mod subscription_recurring_interval;
 pub mod subscription_status;
 pub mod subscription_user;
+pub mod webhook_customer_updated;
 pub mod webhook_order_created_payload;
 pub mod webhook_refund_created_payload;
 pub mod webhook_refund_updated_payload;
