@@ -146,3 +146,4 @@ pub mod wallets_api;
 pub mod webhooks_api;
 
 pub mod configuration;
+pub mod webhook_verify;
