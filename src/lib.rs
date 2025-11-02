@@ -1,16 +1,11 @@
-pub mod client;
+#![allow(unused_imports)]
+#![allow(clippy::too_many_arguments)]
+
+extern crate reqwest;
+extern crate serde;
+extern crate serde_json;
+extern crate serde_repr;
+extern crate url;
+
+pub mod apis;
 pub mod models;
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-    use std::env;
-
-    #[test]
-    fn test_polar_client() {
-        let _ = client::polar::Polar::new(
-            &env::var("POLAR_SANDBOX_API_KEY").unwrap(),
-            client::polar::Server::Sandbox,
-        );
-    }
-}
